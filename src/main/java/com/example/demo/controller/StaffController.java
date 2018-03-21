@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/staff")
 public class StaffController {
-	//测 
+	// 
 	public void add(){
 		System.out.println("ces");
 	}
