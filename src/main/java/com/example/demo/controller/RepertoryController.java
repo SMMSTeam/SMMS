@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/repertory")
 public class RepertoryController {
 	public String createInboundBill() {
-		return "/inbound";
+		return "/";
 	}
 	public String createOutboundBill() {
 		return "/outbound";
