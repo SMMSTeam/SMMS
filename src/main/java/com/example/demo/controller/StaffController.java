@@ -6,5 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/staff")
 public class StaffController {
+	//测试
 
 }
