@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>创建订单</title>
+</head>
+<body>
+	<h1>创建一份订单</h1>
+	<form th:action="@{/orderBill/create}" method="post">
+		<fieldset>
+			<legend>订单信息</legend>
+			<label for="orderBillID">订单ID</label> <input type="text"
+				name="orderBillID" id="orderBillID" /><br />
+			<br /> <label for="ordererID">订货人ID</label> <input type="text"
+				name="ordererID" id="ordererID" /><br />
+			<br /> <label for="storeID">门店ID</label> <input type="text"
+				name="storeID" id="storeID" /><br />
+			<br />
+			<table>
+		<thead>
+			<tr>
+				<th>序号</th>
+				<th>物料ID</th>
+				<th>物料名称</th>
+				<th>物料数量</th>
+			</tr>
+		</thead>
+		<tbody th:each="Materiel , stat:${list}">
+			<tr>
+				<td th:text="${stat.count}"></td>
+				<td th:text="${Materiel.materielID}"></td>
+				<td th:text="${Materiel.materielName}"></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+			<a th:href="@{/orderBill/create/list}">选择物料</a>
+		</fieldset>
+	</form>
+</body>
+</html>

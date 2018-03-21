@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>物料清单</title>
+</head>
+<body>
+	<h1>物料清单</h1>
+	<form action="@{/create/list/submit}" method="post">
+	<table>
+		<thead>
+			<tr>
+				<th>序号</th>
+				<th>物料ID</th>
+				<th>物料名称</th>
+				<th>是否添加</th>
+			</tr>
+		</thead>
+		<tbody th:each="Materiel , stat:${list}">
+			<tr>
+				<td th:text="${stat.count}"></td>
+				<td th:text="${Materiel.materielID}"></td>
+				<td th:text="${Materiel.materielName}"></td>
+				<td><input type="checkbox" /></td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="4"></td>
+			</tr>
+		</tfoot>
+	</table>
+	<input type="submit" value="添加" />
+	</form>
+</body>
+</html>
