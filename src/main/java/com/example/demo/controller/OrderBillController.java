@@ -43,5 +43,10 @@ public class OrderBillController {
 		this.mlist = list;
 		return "redirect:/create";
 	}
+	
+	@RequestMapping("/approve")
+	public String startApprove() {
+		return null;
+	}
 
 }
