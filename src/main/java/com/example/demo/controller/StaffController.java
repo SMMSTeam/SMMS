@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class StaffController {
 	// 
 	public void add(){
-		System.out.println(" ");
-		System.out.println();
+		
 	}
 
 }
