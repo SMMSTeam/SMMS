@@ -1,41 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8" />
-<title>创建订单</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+	<meta charset="UTF-8" />
+	<title>创建订单</title>
 </head>
 <body>
-	<h1>创建一份订单</h1>
-	<form th:action="@{/orderBill/create}" method="post">
-		<fieldset>
-			<legend>订单信息</legend>
-			<label for="orderBillID">订单ID</label> <input type="text"
-				name="orderBillID" id="orderBillID" /><br />
-			<br /> <label for="ordererID">订货人ID</label> <input type="text"
-				name="ordererID" id="ordererID" /><br />
-			<br /> <label for="storeID">门店ID</label> <input type="text"
-				name="storeID" id="storeID" /><br />
-			<br />
-			<table>
-		<thead>
-			<tr>
-				<th>序号</th>
-				<th>物料ID</th>
-				<th>物料名称</th>
-				<th>物料数量</th>
-			</tr>
-		</thead>
-		<tbody th:each="Materiel , stat:${list}">
-			<tr>
-				<td th:text="${stat.count}"></td>
-				<td th:text="${Materiel.materielID}"></td>
-				<td th:text="${Materiel.materielName}"></td>
-				<td></td>
-			</tr>
-		</tbody>
-	</table>
-			<a th:href="@{/orderBill/create/list}">选择物料</a>
-		</fieldset>
-	</form>
-</body>
+<div class="col-lg-12" style="background-color:#84C1FF;border:5px solid white">
+	<h1>
+		<p class="text-center">创建一份订单</p>
+	</h1>
+</div>
+
+<div class="col-sm-6" style="background-color:#ACD6FF;border:5px solid white">
+		<h2><p class="text-center">订单基本信息</p></h2>
+		<div class="col-sm-12">
+		<div class="col-sm-3"><p class="text-right">订单ID</p></div><div class="col-sm-9"><input type="text" style="width:80%;background-color:#D2E9FF" name="orderBillID" id="orderBillID" /><br /><br /></div>	
+		<div class="col-sm-3"><p class="text-right">订货人ID</p></div><div class="col-sm-9"><input type="text" style="width:80%;background-color:#D2E9FF" name="ordererID" id="ordererID" /><br /><br /> </div>	
+		<div class="col-sm-3"><p class="text-right">门店ID</p></div><div class="col-sm-9"><input type="text" style="width:80%;background-color:#D2E9FF" name="storeID" id="storeID" /><br /><br /></div>	
+		</div>	
+</div>
+<div class="col-sm-6" style="background-color:#ACD6FF;border:5px solid white">
+	<h2><p class="text-center">物料类别</p></h2>
+	<div class="col-lg-6" style="background-color:#D2E9FF;border:5px solid #ACD6FF">
+	<h3><p class="text-center">主料</p></h3>
+	<p class="text-center">阿拉比卡咖啡豆</p>
+	<p class="text-center">罗伯斯特咖啡豆</p>
+	<p class="text-center">牛奶</p>
+	</div>
+	<div class="col-lg-6" style="background-color:#D2E9FF;border:5px solid #ACD6FF">
+	<h3><p class="text-center">辅料</p></h3>
+	<p class="text-center">焦糖</p>
+	<p class="text-center">可可粉</p>
+	<p class="text-center">糖浆</p>
+	</div>
+	<div class="col-lg-6" style="background-color:#D2E9FF;border:5px solid #ACD6FF">
+	<h3><p class="text-center">调味料</p></h3>
+	<p class="text-center">香草糖浆</p>
+	<p class="text-center">红茶</p>
+	<p class="text-center">绿茶</p>
+	<p class="text-center">芒果茶</p>
+	</div>
+	<div class="col-lg-6" style="background-color:#D2E9FF;border:5px solid #ACD6FF">
+	<h3><p class="text-center">餐点</p></h3>
+	<p class="text-center">奶油</p>
+	<p class="text-center">面粉</p>
+	<p class="text-center">巧克力</p>
+	</div>
+	<div class="col-lg-6" style="background-color:#D2E9FF;border:5px solid #ACD6FF">
+	<h3><p class="text-center">一次性餐具</p></h3>
+	<p class="text-center">杯子</p>
+	<p class="text-center">吸管</p>
+	<p class="text-center">杯垫</p>
+	</div>
+</div>
+	
+	</body>
 </html>
