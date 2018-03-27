@@ -12,7 +12,7 @@ public class RepertoryController {
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@RequestMapping("/inbound")
 	public String createInboundBill(Model model) {
-		
+		System.out.println("start create inbound bill");
 		return "inbound";
 	}
 	
