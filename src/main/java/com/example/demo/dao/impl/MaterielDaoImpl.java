@@ -27,7 +27,7 @@ public class MaterielDaoImpl implements MaterielDao {
 			@Override
 			public Materiel mapRow(ResultSet rs, int arg1) throws SQLException {
 				// TODO Auto-generated method stub
-				return new Materiel(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4));
+				return new Materiel(rs.getString(1), rs.getString(2), Integer.parseInt(rs.getString(3)), rs.getString(4));
 			}
 		});
 	}
