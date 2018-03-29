@@ -4,7 +4,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 	<meta charset="UTF-8" />
-	<title>创建订单</title>
+	<title>审批订单</title>
 	<style type="text/css">  
     #nav{  
         list-style-type:none;       /*去掉无序列表前面的点*/  
@@ -47,22 +47,22 @@
 
 <ul id="nav" >  
     <li>我的主页</li>  
-    <li class="liclick">创建订单</li>  
-    <li>入库管理</li>  
-    <li>出库管理</li>  
-    <li>库存盘点</li>  
-    <li>报警设置</li>  
-    <li>订单查询</li>  
+    <li>审批订单</li>  
+    <li class="liclick">查看订单</li>  
+    <li>门店管理</li>  
+    <li>员工管理</li>  
+    <li>库存报表</li>  
+    <li>订单报表</li>  
 </ul>  
 
 <div class="col-lg-12" style="background-color:#84C1FF;border:5px solid white">
 	<h1>
-		<p class="text-center">创建一份订单</p>
+		<p class="text-center">订单列表</p>
 	</h1>
 </div>
 
 <div class="col-sm-6" style="background-color:#ACD6FF;border:5px solid white">
-		<h2><p class="text-center">订单基本信息</p></h2>
+		<h2><p class="text-center">待审订单</p></h2>
 		<div class="col-sm-12">
 		<div class="col-sm-3"><p class="text-right" style="font-size:20px">订单ID</p></div><div class="col-sm-9"><input type="text" style="width:80%;background-color:#D2E9FF" name="orderBillID" id="orderBillID" /><br /><br /></div>	
 		<div class="col-sm-3"><p class="text-right" style="font-size:20px">订货人ID</p></div><div class="col-sm-9"><input type="text" style="width:80%;background-color:#D2E9FF" name="ordererID" id="ordererID" /><br /><br /> </div>	
@@ -76,14 +76,13 @@
 		<div class="col-sm-12"  style="font-size:20px" th:each="Materiel , stat:${list}">
 		<div class="col-sm-3"><p class="text-right" th:text="${stat.count}"></p></div>
 		<div class="col-sm-4"><p class="text-center" th:text="${Materiel.materielName}"></p></div>
-		<div class="col-sm-4"><input class="text-center" style="width:80%;background-color:#D2E9FF" name="MaterielNum" id="MaterielNum" /></div>
-		<div class="col-sm-1"><p class="text-center" value="删除"></p></div>
+		<div class="col-sm-5"><input class="text-center" style="width:60%;background-color:#D2E9FF" name="MaterielNum" id="MaterielNum" /></div>
 		</div>
 		
 		<div class="col-sm-12" style="height:50px"></div>
 		
 		<div style="margin:0 auto;width:150px;">
-		<input class="submit" id="btn" style="height:50px;width:150px;font-size:25px" type="submit" value="提交" />
+		<input class="submit" id="btn" style="height:50px;width:150px;font-size:25px" type="submit" value="保存" />
 		</div>
 		
 		<div class="col-sm-12" style="height:20px"></div>
@@ -91,7 +90,7 @@
 
 
 <div class="col-sm-6" style="background-color:#ACD6FF;border:5px solid white">
-	<h2><p class="text-center">物料类别</p></h2>
+	<h2><p class="text-center">已审定单</p></h2>
 	<div class="col-lg-6" style="background-color:#D2E9FF;border:5px solid #ACD6FF">
 	<h3><p class="text-center">主料</p></h3>
 	<p class="text-center">阿拉比卡咖啡豆</p>

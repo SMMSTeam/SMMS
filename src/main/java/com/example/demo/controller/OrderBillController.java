@@ -26,7 +26,8 @@ public class OrderBillController {
 	@RequestMapping("/create")
 	public String createOrderBill(Model model) {
 		System.out.println("create start");
-		model.addAttribute("list",mlist);
+		List<Materiel> list = materielService.getAllMateriel();
+		model.addAttribute("list",list);
 		return "CreateOrderBill";
 	}
 	
@@ -45,8 +46,14 @@ public class OrderBillController {
 	}
 	
 	@RequestMapping("/approve")
-	public String startApprove() {
-		return "login";
+	public String Approvelist() {
+		return "OrderBillList";
 	}
+	
+	@RequestMapping("/approve/detail")
+	public String startApprove() {
+		return "ApproveOrderBill";
+	}
+	
 
 }
