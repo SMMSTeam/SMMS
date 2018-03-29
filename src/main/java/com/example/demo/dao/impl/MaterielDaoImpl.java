@@ -31,4 +31,16 @@ public class MaterielDaoImpl implements MaterielDao {
 			}
 		});
 	}
+
+	@Override
+	public List<Materiel> getMaterielByName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Materiel> getMaterielBySpecification() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
