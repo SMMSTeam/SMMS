@@ -21,7 +21,7 @@
         height:60px;  
         float:left;                 /*所有的li从左到右排列*/  
         text-align:center;          /*文字居中对齐*/  
-        line-height:60px;           /*设置行高，目的是让文字垂直居中*/  
+        line-height:60px;           /*设置行高，目的是让文字垂直居中*/
         border-top:#C9CBCE solid 1px;  
         border-left:#C9CBCE solid 1px;  
         border-bottom:#C9CBCE solid 1px;  
@@ -69,15 +69,15 @@
 		<div class="col-sm-3"><p class="text-right" style="font-size:20px">门店ID</p></div><div class="col-sm-9"><input type="text" style="width:80%;background-color:#D2E9FF" name="storeID" id="storeID" /><br /><br /></div>	
 		</div>	
 		<div class="col-sm-12">
-		<div class="col-sm-4"><p class="text-right" style="font-size:20px">物料编号</p></div>
+		<div class="col-sm-3"><p class="text-right" style="font-size:20px">物料编号</p></div>
 		<div class="col-sm-3"><p class="text-left" style="font-size:20px">物料名称</p></div>
 		<div class="col-sm-5"><p class="text-left" style="font-size:20px">物料数量</p></div>
 		</div>
 		<div class="col-sm-12"  style="font-size:20px" th:each="Materiel , stat:${list}">
-		<div class="col-sm-3"><p class="text-right" th:text="${stat.count}"></p></div>
+		<div class="col-sm-2"><p class="text-right" th:text="${stat.count}"></p></div>
 		<div class="col-sm-4"><p class="text-center" th:text="${Materiel.materielName}"></p></div>
 		<div class="col-sm-4"><input class="text-center" style="width:80%;background-color:#D2E9FF" name="MaterielNum" id="MaterielNum" /></div>
-		<div class="col-sm-1"><p class="text-center" value="删除"></p></div>
+		<div class="col-sm-2"><p class="text-center" >删除</p></div>
 		</div>
 		
 		<div class="col-sm-12" style="height:50px"></div>

@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.entity.Materiel;
+import com.example.demo.entity.OrderBill;
 import com.example.demo.service.MaterielService;
 import com.example.demo.service.OrderBillService;
 
@@ -46,7 +48,12 @@ public class OrderBillController {
 	}
 	
 	@RequestMapping("/approve")
-	public String Approvelist() {
+	public String Approvelist(Model model) {
+		List<OrderBill> list = new ArrayList<OrderBill>();
+		for(int i=0;i<4;i++) {
+			list.add(new OrderBill());
+		}
+		model.addAttribute("list",list);
 		return "OrderBillList";
 	}
 	
