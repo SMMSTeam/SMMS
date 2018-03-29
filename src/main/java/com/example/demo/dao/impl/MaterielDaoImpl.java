@@ -22,7 +22,7 @@ public class MaterielDaoImpl implements MaterielDao {
 	@Override
 	public List<Materiel> getAllMateriel() {
 		// TODO Auto-generated method stub
-		return jdbcTemplate.query("select 物料ID,物料名称 from 物料", 
+		return jdbcTemplate.query("select materielID,materielName,materielType,materielSpec from 物料", 
 				new RowMapper<Materiel>() {
 			@Override
 			public Materiel mapRow(ResultSet rs, int arg1) throws SQLException {

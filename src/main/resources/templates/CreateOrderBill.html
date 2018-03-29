@@ -76,7 +76,8 @@
 		<div class="col-sm-12"  style="font-size:20px" th:each="Materiel , stat:${list}">
 		<div class="col-sm-3"><p class="text-right" th:text="${stat.count}"></p></div>
 		<div class="col-sm-4"><p class="text-center" th:text="${Materiel.materielName}"></p></div>
-		<div class="col-sm-5"><input class="text-center" style="width:60%;background-color:#D2E9FF" name="MaterielNum" id="MaterielNum" /></div>
+		<div class="col-sm-4"><input class="text-center" style="width:80%;background-color:#D2E9FF" name="MaterielNum" id="MaterielNum" /></div>
+		<div class="col-sm-1"><p class="text-center" value="删除"></p></div>
 		</div>
 		
 		<div class="col-sm-12" style="height:50px"></div>
