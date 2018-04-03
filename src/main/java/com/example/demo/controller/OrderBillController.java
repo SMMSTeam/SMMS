@@ -32,20 +32,7 @@ public class OrderBillController {
 		model.addAttribute("list",list);
 		return "CreateOrderBill";
 	}
-	
-	@RequestMapping("/create/list")
-	public String chooseMateriel(Model model) {
-		List<Materiel> list = materielService.getAllMateriel();
-		System.out.println(list);
-		model.addAttribute("list",list);
-		return "MaterielList";
-	}
-	
-	@RequestMapping("/create/list/submit")
-	public String submit(List<Materiel> list) {
-		this.mlist = list;
-		return "redirect:/create";
-	}
+
 	
 	@RequestMapping("/approve")
 	public String Approvelist(Model model) {

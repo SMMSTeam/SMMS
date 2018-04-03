@@ -19,7 +19,7 @@ public class MaterielServiceImpl implements MaterielService {
 	@Override
 	public List<Materiel> getAllMateriel() {
 		// TODO Auto-generated method stub
-		return materielDao.getAllMateriel();
+		return materielDao.findAll();
 	}
 
 }

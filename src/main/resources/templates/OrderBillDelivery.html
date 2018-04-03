@@ -4,7 +4,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 	<meta charset="UTF-8" />
-	<title>审批订单</title>
+	<title>查看订单</title>
 	<style type="text/css">  
     #nav{  
         list-style-type:none;       /*去掉无序列表前面的点*/  
@@ -62,7 +62,7 @@
 </div>
 
 <div class="col-sm-6" style="background-color:#ACD6FF;border:5px solid white">
-		<h2><p class="text-center">待审订单</p></h2>
+		<h2><p class="text-center">已审订单</p></h2>
 		<div class="col-sm-12">
 		<div class="col-sm-3"><p class="text-center" style="font-size:16px">订单编号</p></div>
 		<div class="col-sm-2"><p class="text-center" style="font-size:16px">所属门店</p></div>
@@ -73,9 +73,10 @@
 		<div class="col-sm-3" th:href="@{/approve/detail}" ><p class="text-center" th:text="110101102001003" ></p></div>
 		<div class="col-sm-2"><p class="text-center" th:text="新街口店"></p></div>
 		<div class="col-sm-3"><p class="text-center" th:text="20180329161632"> </p></div>
-		<div class="col-sm-2"><p class="text-center" th:text="批准"></p></div>
-		<div class="col-sm-2"><a th:href="@{/orderBill/approve/detail}">详情</a></div>
-		<div class="col-sm-12"><input type="text" style="width:100%;font-size:20px" value="审批意见" /></div>
+		<div class="col-sm-2"><p class="text-center" th:text="查看"></p></div>
+		<div class="col-sm-2"><a th:href="@{/deliveryBill/create}">生成</a></div>
+		<div class="col-sm-12"><input type="text" style="width:100%;font-size:20px" value="一审意见" /></div>
+		<div class="col-sm-12"><input type="text" style="width:100%;font-size:20px" value="二审意见" /></div>
 		<div class="col-sm-12" style="height:10px"></div>
 		</div>
 		</div>
@@ -100,7 +101,7 @@
 		<div class="col-sm-3"><p class="text-center" th:text="110101102001003"></p></div>
 		<div class="col-sm-3"><p class="text-center" th:text="新街口店"></p></div>
 		<div class="col-sm-3"><p class="text-center" th:text="20180329161632"> </p></div>
-		<div class="col-sm-3"><p class="text-center" th:text="一审通过"></p></div>
+		<div class="col-sm-3"><p class="text-center" th:text="已发货"></p></div>
 		<div class="col-sm-12"><input type="text" style="width:100%;font-size:20px" value="审批意见" /></div>
 		<div class="col-sm-12" style="height:10px"></div>
 		</div>

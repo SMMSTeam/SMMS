@@ -4,7 +4,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 	<meta charset="UTF-8" />
-	<title>创建订单</title>
+	<title>创建派送单</title>
 	<style type="text/css">  
     #nav{  
         list-style-type:none;       /*去掉无序列表前面的点*/  
@@ -47,26 +47,23 @@
 
 <ul id="nav" >  
     <li>我的主页</li>  
-    <li class="liclick">创建订单</li>  
-    <li>入库管理</li>  
-    <li>出库管理</li>  
-    <li>库存盘点</li>  
-    <li>报警设置</li>  
-    <li>订单查询</li>  
+    <li class="liclick">创建派送单</li>  
+    <li>查看订单</li>  
+    <li>查看派送单</li>  
 </ul>  
 
 <div class="col-lg-12" style="background-color:#84C1FF;border:5px solid white">
 	<h1>
-		<p class="text-center">创建一份订单</p>
+		<p class="text-center">创建一份派送单</p>
 	</h1>
 </div>
 
 <div class="col-sm-6" style="background-color:#ACD6FF;border:5px solid white">
-		<h2><p class="text-center">订单基本信息</p></h2>
+		<h2><p class="text-center">派送单基本信息</p></h2>
 		<div class="col-sm-12">
-		<div class="col-sm-3"><p class="text-right" style="font-size:20px">订单ID</p></div><div class="col-sm-9"><input type="text" style="width:80%;background-color:#D2E9FF" name="orderBillID" id="orderBillID" /><br /><br /></div>	
-		<div class="col-sm-3"><p class="text-right" style="font-size:20px">订货人ID</p></div><div class="col-sm-9"><input type="text" style="width:80%;background-color:#D2E9FF" name="ordererID" id="ordererID" /><br /><br /> </div>	
-		<div class="col-sm-3"><p class="text-right" style="font-size:20px">门店ID</p></div><div class="col-sm-9"><input type="text" style="width:80%;background-color:#D2E9FF" name="storeID" id="storeID" /><br /><br /></div>	
+		<div class="col-sm-3"><p class="text-right" style="font-size:20px">派送单ID</p></div><div class="col-sm-9"><input type="text" style="width:80%;background-color:#D2E9FF" name="deliveryBillID" id="deliveryBillID" /><br /><br /></div>	
+		<div class="col-sm-3"><p class="text-right" style="font-size:20px">责任人ID</p></div><div class="col-sm-9"><input type="text" style="width:80%;background-color:#D2E9FF" name="deliverierID" id="deliverierID" /><br /><br /> </div>	
+		<div class="col-sm-3"><p class="text-right" style="font-size:20px">派送门店ID</p></div><div class="col-sm-9"><input type="text" style="width:80%;background-color:#D2E9FF" name="storeID" id="storeID" /><br /><br /></div>	
 		</div>	
 		<div class="col-sm-12">
 		<div class="col-sm-3"><p class="text-right" style="font-size:20px">物料编号</p></div>
@@ -76,7 +73,7 @@
 		<div class="col-sm-12"  style="font-size:20px" th:each="Materiel , stat:${list}">
 		<div class="col-sm-2"><p class="text-right" th:text="${stat.count}"></p></div>
 		<div class="col-sm-4"><p class="text-center" th:text="${Materiel.materiel_name}"></p></div>
-		<div class="col-sm-4"><input class="text-center" style="width:80%;background-color:#D2E9FF" name="MaterielNum" id="MaterielNum" /></div>
+		<div class="col-sm-4"><input class="text-center" style="width:80%;background-color:#D2E9FF" name="materiel_num" id="materiel_num" /></div>
 		<div class="col-sm-2"><p class="text-center" >删除</p></div>
 		</div>
 		

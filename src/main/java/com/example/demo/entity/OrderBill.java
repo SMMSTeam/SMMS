@@ -4,130 +4,105 @@ import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import org.springframework.stereotype.Repository;
 
-@Repository
+@Entity
+@Table
 public class OrderBill implements Serializable{
 
 	private static final long serialVersionUID = 123001489782724630L;
-	private String orderBillID;
-	private String storeID;
-	private String ordererID;
-	private MaterielIDandNum[] materielIDandNums;
-	private Date createTime;
-	private String orderBillState;
-	private String approver1ID;
+	@Id
+	private String orderbill_id;
+	private String store_id;
+	private String orderer_id;
+	private MaterielIDandNum[] materiel_nums;
+	private Date create_time;
+	private String orderbill_state;
+	private String approver1id;
 	private String opinion1;
-	private String approver2ID;
+	private String approver2id;
 	private String opinion2;
 	
 	public OrderBill() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 
-	public OrderBill(String orderBillID, String storeID, String ordererID) {
+	public OrderBill(String orderbill_id, String store_id, String orderer_id, MaterielIDandNum[] materiel_nums,
+			Date create_time, String orderbill_state, String approver1id, String opinion1, String approver2id,
+			String opinion2) {
 		super();
-		this.orderBillID = orderBillID;
-		this.storeID = storeID;
-		this.ordererID = ordererID;
-	}
-
-	public OrderBill(String orderBillID, String storeID, String ordererID, MaterielIDandNum[] materielIDandNums,
-			Date createTime) {
-		super();
-		this.orderBillID = orderBillID;
-		this.storeID = storeID;
-		this.ordererID = ordererID;
-		this.materielIDandNums = materielIDandNums;
-		this.createTime = createTime;
-		this.orderBillState = "待审";
-	}
-
-	public OrderBill(String orderBillID, String storeID, String ordererID, MaterielIDandNum[] materielIDandNums,
-			Date createTime, String approver1id, String opinion1) {
-		super();
-		this.orderBillID = orderBillID;
-		this.storeID = storeID;
-		this.ordererID = ordererID;
-		this.materielIDandNums = materielIDandNums;
-		this.createTime = createTime;
-		this.approver1ID = approver1id;
+		this.orderbill_id = orderbill_id;
+		this.store_id = store_id;
+		this.orderer_id = orderer_id;
+		this.materiel_nums = materiel_nums;
+		this.create_time = create_time;
+		this.orderbill_state = orderbill_state;
+		this.approver1id = approver1id;
 		this.opinion1 = opinion1;
-		this.orderBillState = "一审通过";
-	}
-
-	public OrderBill(String orderBillID, String storeID, String ordererID, MaterielIDandNum[] materielIDandNums,
-			Date createTime, String approver1id, String opinion1, String approver2id, String opinion2) {
-		super();
-		this.orderBillID = orderBillID;
-		this.storeID = storeID;
-		this.ordererID = ordererID;
-		this.materielIDandNums = materielIDandNums;
-		this.createTime = createTime;
-		this.approver1ID = approver1id;
-		this.opinion1 = opinion1;
-		this.approver2ID = approver2id;
+		this.approver2id = approver2id;
 		this.opinion2 = opinion2;
-		this.orderBillState = "二审通过";
 	}
 
-	public String getOrderBillID() {
-		return orderBillID;
+	public String getOrderbill_id() {
+		return orderbill_id;
 	}
 
-	public void setOrderBillID(String orderBillID) {
-		this.orderBillID = orderBillID;
+	public void setOrderbill_id(String orderbill_id) {
+		this.orderbill_id = orderbill_id;
 	}
 
-	public String getStoreID() {
-		return storeID;
+	public String getStore_id() {
+		return store_id;
 	}
 
-	public void setStoreID(String storeID) {
-		this.storeID = storeID;
+	public void setStore_id(String store_id) {
+		this.store_id = store_id;
 	}
 
-	public String getOrdererID() {
-		return ordererID;
+	public String getOrderer_id() {
+		return orderer_id;
 	}
 
-	public void setOrdererID(String ordererID) {
-		this.ordererID = ordererID;
+	public void setOrderer_id(String orderer_id) {
+		this.orderer_id = orderer_id;
 	}
 
-	public MaterielIDandNum[] getMaterielIDandNums() {
-		return materielIDandNums;
+	public MaterielIDandNum[] getMateriel_nums() {
+		return materiel_nums;
 	}
 
-	public void setMaterielIDandNums(MaterielIDandNum[] materielIDandNums) {
-		this.materielIDandNums = materielIDandNums;
+	public void setMateriel_nums(MaterielIDandNum[] materiel_nums) {
+		this.materiel_nums = materiel_nums;
 	}
 
-	public Date getCreateTime() {
-		return createTime;
+	public Date getCreate_time() {
+		return create_time;
 	}
 
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
+	public void setCreate_time(Date create_time) {
+		this.create_time = create_time;
 	}
 
-	public String getOrderBillState() {
-		return orderBillState;
+	public String getOrderbill_state() {
+		return orderbill_state;
 	}
 
-	public void setOrderBillState(String orderBillState) {
-		this.orderBillState = orderBillState;
+	public void setOrderbill_state(String orderbill_state) {
+		this.orderbill_state = orderbill_state;
 	}
 
-	public String getApprover1ID() {
-		return approver1ID;
+	public String getApprover1id() {
+		return approver1id;
 	}
 
-	public void setApprover1ID(String approver1id) {
-		approver1ID = approver1id;
+	public void setApprover1id(String approver1id) {
+		this.approver1id = approver1id;
 	}
 
 	public String getOpinion1() {
@@ -138,12 +113,12 @@ public class OrderBill implements Serializable{
 		this.opinion1 = opinion1;
 	}
 
-	public String getApprover2ID() {
-		return approver2ID;
+	public String getApprover2id() {
+		return approver2id;
 	}
 
-	public void setApprover2ID(String approver2id) {
-		approver2ID = approver2id;
+	public void setApprover2id(String approver2id) {
+		this.approver2id = approver2id;
 	}
 
 	public String getOpinion2() {
@@ -160,16 +135,12 @@ public class OrderBill implements Serializable{
 
 	@Override
 	public String toString() {
-		return "OrderBill [orderBillID=" + orderBillID + ", storeID=" + storeID + ", ordererID=" + ordererID
-				+ ", materielIDandNums=" + Arrays.toString(materielIDandNums) + ", createTime=" + createTime
-				+ ", orderBillState=" + orderBillState + ", approver1ID=" + approver1ID + ", opinion1=" + opinion1
-				+ ", approver2ID=" + approver2ID + ", opinion2=" + opinion2 + "]";
+		return "OrderBill [orderbill_id=" + orderbill_id + ", store_id=" + store_id + ", orderer_id=" + orderer_id
+				+ ", materiel_nums=" + Arrays.toString(materiel_nums) + ", create_time=" + create_time
+				+ ", orderbill_state=" + orderbill_state + ", approver1id=" + approver1id + ", opinion1=" + opinion1
+				+ ", approver2id=" + approver2id + ", opinion2=" + opinion2 + "]";
 	}
 	
 	
 	
-	
-	
-	
-
 }

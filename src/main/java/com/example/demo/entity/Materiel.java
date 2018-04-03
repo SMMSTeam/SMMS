@@ -2,59 +2,62 @@ package com.example.demo.entity;
 
 import java.io.Serializable;
 
-import org.springframework.stereotype.Repository;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Repository
+@Entity
+@Table
 public class Materiel implements Serializable{
 
 	private static final long serialVersionUID = -4813132259918868046L;
-	private String materielID;
-	private String materielName;
-	private int materielType;
-	private String materielSpec;
+	@Id
+	private String materiel_id;
+	private String materiel_name;
+	private int materiel_type;
+	private String materiel_spec;
 	public Materiel() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Materiel(String materielID, String materielName, int materielType, String materielSpec) {
+	public Materiel(String materiel_id, String materiel_name, int materiel_type, String materiel_spec) {
 		super();
-		this.materielID = materielID;
-		this.materielName = materielName;
-		this.materielType = materielType;
-		this.materielSpec = materielSpec;
+		this.materiel_id = materiel_id;
+		this.materiel_name = materiel_name;
+		this.materiel_type = materiel_type;
+		this.materiel_spec = materiel_spec;
 	}
-	public String getMaterielID() {
-		return materielID;
+	public String getMateriel_id() {
+		return materiel_id;
 	}
-	public void setMaterielID(String materielID) {
-		this.materielID = materielID;
+	public void setMateriel_id(String materiel_id) {
+		this.materiel_id = materiel_id;
 	}
-	public String getMaterielName() {
-		return materielName;
+	public String getMateriel_name() {
+		return materiel_name;
 	}
-	public void setMaterielName(String materielName) {
-		this.materielName = materielName;
+	public void setMateriel_name(String materiel_name) {
+		this.materiel_name = materiel_name;
 	}
-	public int getMaterielType() {
-		return materielType;
+	public int getMateriel_type() {
+		return materiel_type;
 	}
-	public void setMaterielType(int materielType) {
-		this.materielType = materielType;
+	public void setMateriel_type(int materiel_type) {
+		this.materiel_type = materiel_type;
 	}
-	public String getMaterielSpec() {
-		return materielSpec;
+	public String getMateriel_spec() {
+		return materiel_spec;
 	}
-	public void setMaterielSpec(String materielSpec) {
-		this.materielSpec = materielSpec;
+	public void setMateriel_spec(String materiel_spec) {
+		this.materiel_spec = materiel_spec;
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
 	@Override
 	public String toString() {
-		return "Materiel [materielID=" + materielID + ", materielName=" + materielName + ", materielType="
-				+ materielType + ", materielSpec=" + materielSpec + "]";
+		return "Materiel [materiel_id=" + materiel_id + ", materiel_name=" + materiel_name + ", materiel_type="
+				+ materiel_type + ", materiel_spec=" + materiel_spec + "]";
 	}
-	
 	
 }
